@@ -1,0 +1,29 @@
+#! /usr/bin/env ruby
+
+require 'io/console'
+require 'matrix'
+require 'byebug'
+
+YEAR = 2022
+SESSION = File.read(File.join(__dir__, ".session_token")).strip
+
+day = ARGV[0]
+
+url = "https://adventofcode.com/#{YEAR}/day/#{day}/input"
+
+File.open(File.join(__dir__, "inputs", "#{day}.txt"), "w") do |io|
+  io.write `curl --cookie session=#{SESSION} #{url}`
+end
+
+["1", "2"].each do |problem|
+  klass_name = "D#{day}P#{problem}".to_sym
+  klass_name = "#{klass_name}::#{klass_name}"
+  File.open(File.join(__dir__, "lib", "#{day}-#{problem}.rb"), "w") do |io|
+    io.puts "module D#{day}P#{problem}"
+    io.puts "  class D#{day}P#{problem}"
+    io.puts "    def run(input)"
+    io.puts "    end"
+    io.puts "  end"
+    io.puts "end"
+  end
+end
