@@ -19,6 +19,7 @@ def $stdout.write string
 end
 
 input = File.readlines(input_file)
+input.map!{|line| line.strip}
 problem = Object::const_get(klass_name).new()
 start_time  = Time.now
 problem.run(input)
