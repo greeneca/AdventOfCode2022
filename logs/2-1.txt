@@ -1,0 +1,2 @@
+Score: 14375
+Duration: 1.37ms
