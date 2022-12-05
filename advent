@@ -18,9 +18,10 @@ def $stdout.write string
   super
 end
 
+klass = Object::const_get(klass_name)
+problem = klass.new()
 input = File.readlines(input_file)
-input.map!{|line| line.strip}
-problem = Object::const_get(klass_name).new()
+input.map!{|line| line.strip} unless klass.const_defined?("NO_STRIP")
 start_time  = Time.now
 problem.run(input)
 end_time  = Time.now
