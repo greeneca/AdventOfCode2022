@@ -20,9 +20,9 @@ end
 
 klass = Object::const_get(klass_name)
 problem = klass.new()
+start_time  = Time.now
 input = File.readlines(input_file)
 input.map!{|line| line.strip} unless klass.const_defined?("NO_STRIP")
-start_time  = Time.now
 problem.run(input)
 end_time  = Time.now
 
