@@ -1,0 +1,2 @@
+Size: 1117448
+Duration: 1.48ms
