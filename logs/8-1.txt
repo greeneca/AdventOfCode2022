@@ -1,0 +1,2 @@
+Count: 1823
+Duration: 314.89ms
