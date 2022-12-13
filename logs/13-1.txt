@@ -1,0 +1,51 @@
+===============Pair 1==================
+Compare [1, 1, 3, 1, 1] vs [1, 1, 5, 1, 1]
+Compare 1 vs 1
+Compare 1 vs 1
+Compare 3 vs 5
+Left side smaller, in order
+===============Pair 2==================
+Compare [[1], [2, 3, 4]] vs [[1], 4]
+Compare [1] vs [1]
+Compare 1 vs 1
+Compare  vs 
+Both ran out, continuing
+Compare [2, 3, 4] vs 4
+Mixed Types, convert right to [4]
+Compare 2 vs 4
+Left side smaller, in order
+===============Pair 3==================
+Compare [9] vs [[8, 7, 6]]
+Compare 9 vs [8, 7, 6]
+Mixed Types, convert left to [9]
+Compare 9 vs 8
+Right side smaller, out of order
+===============Pair 4==================
+Compare [[4, 4], 4, 4] vs [[4, 4], 4, 4, 4]
+Compare [4, 4] vs [4, 4]
+Compare 4 vs 4
+Compare 4 vs 4
+Compare  vs 
+Both ran out, continuing
+Compare 4 vs 4
+Compare 4 vs 4
+Compare  vs 4
+Left side ran out of items, in order
+===============Pair 5==================
+Compare [7, 7, 7, 7] vs [7, 7, 7]
+Compare 7 vs 7
+Compare 7 vs 7
+Compare 7 vs 7
+Compare 7 vs 
+Right side ran out of items, out of order
+===============Pair 6==================
+Compare [] vs [3]
+Compare  vs 3
+Left side ran out of items, in order
+===============Pair 7==================
+Compare [[[]]] vs [[]]
+Compare [[]] vs []
+Compare [] vs 
+Right side ran out of items, out of order
+Sum: [1, 2, 4, 6]:13
+Duration: 1.28ms
