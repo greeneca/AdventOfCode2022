@@ -8,10 +8,11 @@ Dir.glob("lib/*.rb").each do |file|
   require_relative file
 end
 
-klass_name = "D#{ARGV[0].sub("-", "P")}".to_sym
+problem = ARGV.shift
+klass_name = "D#{problem.sub("-", "P")}".to_sym
 klass_name = "#{klass_name}::#{klass_name}"
-input_file = ARGV[1]
-$output_file = File.new(File.join(__dir__, "logs", "#{ARGV[0]}.txt"), "w")
+input_file = ARGV.shift
+$output_file = File.new(File.join(__dir__, "logs", "#{problem}.txt"), "w")
 
 def $stdout.write string
   $output_file.write string
